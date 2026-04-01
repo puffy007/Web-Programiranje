@@ -1,0 +1,122 @@
+/* OSNOVNO */
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to right, orange, orangered);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* NAVIGACIJA (tvoj <nav>) */
+nav {
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    background: #444;
+    padding: 10px 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* HOVER "DROPDOWN" efekt (bez HTML promjene) */
+nav ul {
+    display: none;
+}
+
+nav:hover ul {
+    display: block;
+    background: #5a2d2d;
+    padding: 15px;
+}
+
+/* SADRŽAJ (sve ispod headera) */
+h1, table, section, article {
+    margin-left: 250px;
+}
+
+/* ODMAK OD HEADERA */
+h1 {
+    margin-top: 140px;
+}
+
+/* TABLICA */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    background: white;
+    margin-bottom: 20px;
+}
+
+th {
+    background: #ddd;
+}
+
+td, th {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* SECTION I ARTICLE */
+section, article {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* ASIDE (dodajemo vizualno desno iako ga nemaš) */
+section::after {
+    content: "";
+    display: block;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    nav {
+        position: static;
+        width: 100%;
+    }
+
+    h1, table, section, article {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+}
