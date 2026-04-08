@@ -1,51 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Galerija slika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slike</title>
 
-    <link href="/style/style.css" rel="stylesheet" />
-    <link href="/style/style_slike.css" rel="stylesheet" />
-    <link href="/style/nav.css" rel="stylesheet" />
-  </head>
+    <!-- ISTI CSS KAO INDEX -->
+    <link rel="stylesheet" href="/style/style.css">
+</head>
 
-  <body>
-    <header>
-      <h1>Slike</h1>
-    </header>
+<body>
 
-    <input type="checkbox" id="menu-toggle" />
+<header>
+    <h1>Dobrodošli na galeriju slika</h1>
+</header>
 
-    <nav class="side-nav" aria-labelledby="primarna-navigacija">
-      <h2 id="primarna-navigacija" class="visually-hidden">
-        Primarna navigacija
-      </h2>
+<!-- ISTI MENU KAO INDEX -->
+<nav class="menu" aria-label="Primarna navigacija">
+    ☰ Menu
+    <div class="dropdown">
+        <h3>Primarna navigacija</h3>
+        <ul>
+            <li><a href="/">Početna</a></li>
+            <li><a href="grafikon.html">Grafikoni</a></li>
+            <li><a href="slike.html">Galerija</a></li>
+            <li><a href="/slike">Slike</a></li>
 
-      <label for="menu-toggle" class="menu-button" aria-label="Otvori izbornik">
-        ☰
-      </label>
+        </ul>
+    </div>
+</nav>
 
-      <ul>
-        <li><a href="/">Početna</a></li>
-        <li><a href="/grafikon">Grafikon</a></li>
-        <li><a href="/slike">Slike</a></li>
-        <li><a href="/galerija">Galerija</a></li>
-        <li><a href="#">Kontakt</a></li>
-      </ul>
-    </nav>
+<main>
 
-    <section class="galerija">
-      <h1>Galerija filmova</h1>
+    <h2>Galerija slika</h2>
 
-      <% images.forEach(image => { %>
-        <figure class="galerija_slika">
-          <a class="image-popup-vertical-fit" href="<%= image.full %>" title="<%= image.title %>">
-            <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy" />
-          </a>
-          <figcaption><%= image.title %></figcaption>
-        </figure>
-      <% }) %>
+    <section class="gallery">
+
+        <% images.forEach((image) => { %>
+
+            <figure>
+                <!-- klik otvara sliku -->
+                <a href="<%= image.url %>" target="_blank">
+                    <img src="<%= image.url %>" alt="<%= image.title %>">
+                </a>
+                <figcaption><%= image.title %></figcaption>
+            </figure>
+
+        <% }) %>
+
     </section>
-  </body>
+
+</main>
+
+<footer>
+    <p>&copy; 2025. Web Programiranje</p>
+</footer>
+
+</body>
 </html>
