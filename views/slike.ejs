@@ -41,7 +41,7 @@
       <% images.forEach(image => { %>
         <figure class="galerija_slika">
           <a class="image-popup-vertical-fit" href="<%= image.full %>" title="<%= image.title %>">
-            <img src="<%= image.thumb %>" alt="<%= image.title %>" loading="lazy" />
+            <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy" />
           </a>
           <figcaption><%= image.title %></figcaption>
         </figure>
