@@ -5,8 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
+    "start": "node server.js",
+    "build": "apt-get install -y php8.2 php8.2-mysql php8.2-mbstring 2>/dev/null || true"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
